@@ -14,7 +14,7 @@ hostname = socket.gethostname()
 if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
     master_url = 'https://runestone.academy'
 elif hostname == 'fopp.learningpython.today':
-    master_url = 'https://fopp.learningpython.today'
+    master_url = 'https://demo.learningpython.today'
 else:
     master_url = 'http://127.0.0.1:8000'
 
