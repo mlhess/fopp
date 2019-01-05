@@ -11,16 +11,11 @@ sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
 hostname = socket.gethostname()
-if hostname in ['runestone-deploy', 'rsbuilder', 'runestone.academy']:
-    master_url = 'https://runestone.academy'
-elif hostname == 'fopp.learningpython.today':
-    master_url = 'https://fopp.learningpython.today'
-else:
-    master_url = 'http://127.0.0.1:8000'
+master_url = ''
 
 master_app = 'runestone'
 serving_dir = "./build/fopp"
-dest = "../../static"
+dest = "static"
 
 options(
     sphinx = Bunch(docroot=".",),
@@ -36,7 +31,7 @@ options(
                        'appname':master_app,
                        'loglevel': 10,
                        'course_url':master_url,
-                       'use_services': 'true',
+                       'use_services': 'false',
                        'python3': 'true',
                        'dburl': 'postgresql://user:password@localhost/runestone',
                        'default_ac_lang': 'python',
